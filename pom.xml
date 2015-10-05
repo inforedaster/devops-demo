@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oceaneconsulting.projects</groupId>
+  <artifactId>devops</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.2-SNAPSHOT</version>
+  <name>devops Maven Webapp</name>
+  <url>http://www.oceaneconsulting.com</url>
+  
+  <!-- Deploy to Oceane Archiva Repositories -->
+  <distributionManagement>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Oceane consultiung Snapshot Repository</name>
+      <url>http://192.168.10.44:7070/repository/snapshots/</url>
+    </snapshotRepository>
+ </distributionManagement>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>devops</finalName>
+  </build>
+</project>
