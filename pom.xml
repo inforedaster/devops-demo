@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.oceaneconsulting.projects</groupId>
   <artifactId>devops</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar/packaging>
   <version>0.0.2-SNAPSHOT</version>
   <name>devops Maven Webapp</name>
   <url>http://www.oceaneconsulting.com</url>
