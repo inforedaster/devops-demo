@@ -20,7 +20,7 @@
   </properties>
 
   <build>
-    <finalName>hello</finalName>
+    <finalName>devops</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
