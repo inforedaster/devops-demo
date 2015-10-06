@@ -1,31 +1,53 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.oceaneconsulting.projects</groupId>
-  <artifactId>devops</artifactId>
+
+  <groupId>gageot.net</groupId>
+  <artifactId>helloworld</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <version>0.0.2-SNAPSHOT</version>
-  <name>devops Maven Webapp</name>
-  <url>http://www.oceaneconsulting.com</url>
-  
-  <!-- Deploy to Oceane Archiva Repositories -->
-  <distributionManagement>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <name>Oceane consultiung Snapshot Repository</name>
-      <url>http://192.168.10.44:7070/repository/snapshots/</url>
-    </snapshotRepository>
- </distributionManagement>
-  
+
+  <prerequisites>
+    <maven>3</maven>
+  </prerequisites>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <build>
+    <finalName>hello</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>dependency</classpathPrefix>
+              <mainClass>net.gageot.MainHello</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+      <groupId>net.code-story</groupId>
+      <artifactId>http</artifactId>
+      <version>2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>3.1.1-1</version>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>devops</finalName>
-  </build>
 </project>
